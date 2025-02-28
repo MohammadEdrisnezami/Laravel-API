@@ -7,12 +7,7 @@ use GuzzleHttp\Client;
 class HomeController extends Controller
 {
     //
-    function index(){
-         
-        $client = new Client();
-        $respons=$client->request('GET','https://api.covid19api.com/summary');
-        $respons->getBody();
-
+    function index(){ 
         return view('index');
     }
 }
