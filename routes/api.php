@@ -6,4 +6,5 @@ use App\Http\Controllers\ImageUploadController;
 Route::get('/user', function (Request $request) {
     return $request->user(); 
 })->middleware('auth:sanctum');
-Route::post('upload-image', [ImageUploadController::class, 'upload']);
+// Make sure this route is in routes/api.php
+Route::post('/upload-image', [ImageUploadController::class, 'upload']);
